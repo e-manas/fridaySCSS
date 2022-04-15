@@ -1,0 +1,51 @@
+@import 'colors';
+@import 'media-queries';
+@import 'hero';
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.navbar{
+	background-color: $light;
+	height: 150px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	padding: .5rem calc((100vw-120px)/2);
+	z-index: 10;
+	position: relative;
+	&__logo{
+		color: $dark;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 2rem;
+	}
+	&__mobilemenu{
+		opacity: 0;
+		@include phone{
+			opacity: 1;
+			color: $darkOrange;
+		}
+	}
+	&__menu{
+		text-align: center;
+		margin-right: 80px;
+		@include phone{
+			display: none;
+		}
+		&--link{
+			color: $dark;
+			justify-content: center;
+			text-decoration: none;
+			padding: 0 1rem;
+		}
+		&--link:hover{
+			color: $darkOrange;
+			transition: all .5s ease;
+		}
+}
+}

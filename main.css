@@ -1,0 +1,115 @@
+.hero {
+  background-color: #a7a7a7;
+}
+
+.hero__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  height: 85vh;
+  z-index: 1;
+  min-width: 1200px;
+}
+
+@media screen and (max-width: 700px) {
+  .hero__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.hero__container--left {
+  width: 100%;
+  line-height: 2;
+}
+
+@media screen and (max-width: 700px) {
+  .hero__container--left {
+    padding: 5rem 2rem;
+  }
+}
+
+.hero__container--right img {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .hero__container--right img {
+    width: 50%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #a7a7a7;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 0.5rem calc((100vw-120px)/2);
+  z-index: 10;
+  position: relative;
+}
+
+.navbar__logo {
+  color: #222;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.navbar__mobilemenu {
+  opacity: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar__mobilemenu {
+    opacity: 1;
+    color: #f68d0c;
+  }
+}
+
+.navbar__menu {
+  text-align: center;
+  margin-right: 80px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
+.navbar__menu--link {
+  color: #222;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.navbar__menu--link:hover {
+  color: #f68d0c;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/*# sourceMappingURL=main.css.map */

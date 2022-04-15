@@ -1,0 +1,35 @@
+@import 'colors';
+@import 'media-queries';
+
+.hero{
+	background-color: $light;
+	&__container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		margin: 0 auto;
+		height: 85vh;
+		z-index: 1;
+		min-width: 1200px;
+		@include phone{
+			grid-template-columns: 1fr;
+		}
+		&--left{
+			width: 100%;
+			line-height: 2;
+			@include phone{
+				padding: 5rem 2rem;
+			}
+		}
+		&--right{
+			img{
+				width: 100%;
+			}
+			@include phone{
+				img{
+					width: 50%;;
+				}
+			}
+		}
+	}
+}
